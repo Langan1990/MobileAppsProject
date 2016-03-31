@@ -17,16 +17,23 @@ public class CharacterCode : MonoBehaviour {
 
 	bool dJump = false;
 
-
+    
 	void Start () 
 	{
-		a = GetComponent<Animator> ();
-		myRigidBody = GetComponent<Rigidbody2D> ();
+		a = GetComponent<Animator> ();//gets the animator component
+		myRigidBody = GetComponent<Rigidbody2D> ();//gets the rigidbodycomponenet
 	}
 
 	void Update()
 	{
-		if ((ground || !dJump) && Input.GetKeyDown (KeyCode.Space)) {
+
+        
+
+
+        
+
+
+        if ((ground || !dJump) && (Input.GetKeyDown (KeyCode.Space) || (Input.GetMouseButtonDown(0)))) {
 			a.SetBool("Ground", false);
 			myRigidBody.AddForce(new Vector2(0, jumpForce));
 
