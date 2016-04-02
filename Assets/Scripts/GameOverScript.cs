@@ -13,8 +13,8 @@ public class GameOverScript : MonoBehaviour {
     void Start()
     {
         score = PlayerPrefs.GetInt("Score");// Gets the score from the hudscript
-    
-        
+        highScore = PlayerPrefs.GetInt("High Score");// Gets the high score 
+
     }
 
     void Update()
@@ -24,6 +24,7 @@ public class GameOverScript : MonoBehaviour {
         if (score > highScore)
         {
             highScore = score;
+            PlayerPrefs.SetInt("High Score", highScore);//stores the high score
         }
     }
 

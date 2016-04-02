@@ -33,8 +33,8 @@ public class ScoreManager : MonoBehaviour {
             hiScoreCount = scoreCount;
         }
 
-        scoreText.text = "SCORE:" + Mathf.Round(scoreCount);
-        hiScoreText.text = "SCORE:" + Mathf.Round(hiScoreCount);
+       // scoreText.text = "SCORE:" + Mathf.Round(scoreCount);
+      //  hiScoreText.text = "SCORE:" + Mathf.Round(hiScoreCount);
 
 
     }
