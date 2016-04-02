@@ -14,4 +14,9 @@ public class MenuScript : MonoBehaviour {
     {
         Application.Quit();//quit the application
     }
+
+    public void Settings()//start game button method
+    {
+        Application.LoadLevel(3);// loads the mainscene
+    }
 }

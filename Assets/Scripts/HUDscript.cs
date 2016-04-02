@@ -6,6 +6,7 @@ public class HUDscript : MonoBehaviour {
 
 
 	float playerScore = 0;
+    float highscore = 0;
 
 
 
