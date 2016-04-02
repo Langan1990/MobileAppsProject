@@ -49,8 +49,8 @@
      <Compile Include="Assets\Scripts\CamScript.cs" />
      <Compile Include="Assets\Scripts\CharacterCode.cs" />
      <Compile Include="Assets\Scripts\DestroyerScript.cs" />
-     <Compile Include="Assets\Scripts\HUD.cs" />
-     <Compile Include="Assets\Scripts\Item.cs" />
+     <Compile Include="Assets\Scripts\HUDscript.cs" />
+     <Compile Include="Assets\Scripts\Itemscript.cs" />
      <Compile Include="Assets\Scripts\SpawnScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
