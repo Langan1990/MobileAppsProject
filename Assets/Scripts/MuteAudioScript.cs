@@ -11,37 +11,24 @@ public class MuteAudioScript : MonoBehaviour {
 
 	// Use this for initialization
 	public void Start () {
-       // Audio = GameObject.Find("ACE Rhythm n' Lead").GetComponent<AudioSource>();//find the hudscript in the 'main camera' object
-        pressed = GameObject.Find("Audio").GetComponent<Toggle>();
+        Audio = GameObject.Find("Music").GetComponent<AudioSource>();//find the hudscript in the 'main camera' object
+       // pressed = GameObject.Find("Audio").GetComponent<Toggle>();
         //  Audio = GetComponent<AudioSource>();
 
     }
 
-
-
-   public void Mute()
+    public void Update()
     {
-        if (pressed == true)
-        {
-            Audio.mute = false;
-        }
-        else
-        {
-            Audio.mute = true;
-        }
-
         
     }
 
     
 
-    public void Toggle_changed(bool newValue)
+    public void Volume(float volume)
     {
-        pressed = newValue;
-
+        Audio.volume = volume;
+        PlayerPrefs.SetFloat("Volume", volume);//stores the volume
     }
-
-
 
 
 

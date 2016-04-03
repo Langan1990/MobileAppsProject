@@ -17,29 +17,29 @@ public class CharacterCode : MonoBehaviour {
 
 	bool dJump = false;
 
-    
-	void Start () 
+    AudioSource Audio;
+
+
+    void Start () 
 	{
 		a = GetComponent<Animator> ();//gets the animator component
 		myRigidBody = GetComponent<Rigidbody2D> ();//gets the rigidbodycomponenet
-	}
+
+        float volume = PlayerPrefs.GetInt("Volume");// Gets the volume
+        Audio.volume = volume;
+    }
 
 	void Update()
 	{
 
-        
+        if ((ground || !dJump) && (Input.GetKeyDown (KeyCode.Space) || (Input.GetMouseButtonDown(0))))// if the player is on the ground OR not after double jumping AND space bar OR mouse are pressed
+        {
+			a.SetBool("Ground", false);// set the ground variable to false
+			myRigidBody.AddForce(new Vector2(0, jumpForce));//and use jumpforce to make the player jump
 
-
-        
-
-
-        if ((ground || !dJump) && (Input.GetKeyDown (KeyCode.Space) || (Input.GetMouseButtonDown(0)))) {
-			a.SetBool("Ground", false);
-			myRigidBody.AddForce(new Vector2(0, jumpForce));
-
-			if (!dJump && !ground)
+			if (!dJump && !ground)//if you havent used the doublejump AND your not on the ground
 			{
-				dJump = true;
+				dJump = true;//set double jump to true
 			}
 		}
 	}
