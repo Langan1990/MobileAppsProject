@@ -5,14 +5,8 @@ public class HUDscript : MonoBehaviour {
 
 
 
-	float playerScore = 0;
-    float highscore = 0;
-
-
-
-
-
-
+	float playerScore = 0;//variable for playerScore
+    
 
 	// Update is called once per frame
 	void Update () {
@@ -21,18 +15,19 @@ public class HUDscript : MonoBehaviour {
 
 	}
 
+
 	public void IncreaseScore(int amount)
 	{
 		playerScore += amount;// add the score to the amount
 
 	}
 
+
     void OnDisable()
     {
         PlayerPrefs.SetInt("Score", (int)(playerScore * 10));//stores the score to be used in the gameoverscript
     }
-
-
+    
 
 	void OnGUI()
 	{

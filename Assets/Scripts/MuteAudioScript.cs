@@ -11,7 +11,7 @@ public class MuteAudioScript : MonoBehaviour {
 
 	// Use this for initialization
 	public void Start () {
-        Audio = GameObject.Find("Music").GetComponent<AudioSource>();//find the hudscript in the 'main camera' object
+      //  Audio = GameObject.Find("Music").GetComponent<AudioSource>();//find the hudscript in the 'main camera' object
        // pressed = GameObject.Find("Audio").GetComponent<Toggle>();
         //  Audio = GetComponent<AudioSource>();
 
@@ -24,11 +24,11 @@ public class MuteAudioScript : MonoBehaviour {
 
     
 
-    public void Volume(float volume)
-    {
-        Audio.volume = volume;
-        PlayerPrefs.SetFloat("Volume", volume);//stores the volume
-    }
+   // public void Volume(float volume)
+    //{
+     //   Audio.volume = volume;
+       // PlayerPrefs.SetFloat("Volume", volume);//stores the volume
+   // }
 
 
 

@@ -11,7 +11,7 @@ public class DestroyerScript : MonoBehaviour {
 		if (other.tag == "Player") //if the player collides with the object
         {
 			Application.LoadLevel(2);//load the gameoverscene
-            return;	
+            
 			
 		}
 

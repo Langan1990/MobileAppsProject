@@ -4,6 +4,10 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
 
+    /*
+
+    another way of trying the high score
+
 
     public Text scoreText;
     public Text hiScoreText;
@@ -38,4 +42,5 @@ public class ScoreManager : MonoBehaviour {
 
 
     }
+    */
 }

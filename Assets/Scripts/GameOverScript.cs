@@ -4,10 +4,10 @@ using UnityEngine.UI;
 
 public class GameOverScript : MonoBehaviour {
 
-    int score = 0;
-    int highScore ;
+    int score = 0;//declare variable for score
+    int highScore ;//variable for high score
 
-    public Text scorecount ;
+    
 
     
     void Start()

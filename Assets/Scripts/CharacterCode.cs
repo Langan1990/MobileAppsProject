@@ -9,13 +9,13 @@ public class CharacterCode : MonoBehaviour {
 	Animator a;
 	Rigidbody2D myRigidBody;
 
-	bool ground = false;
-	public Transform groundCheck;
+	bool ground = false;//declare boolean variable for if the character is on the ground or not
+	public Transform groundCheck;//variable for the position of the ground check
 	float groundRadius = 0.2f;
-	public float jumpForce = 700f;
+	public float jumpForce = 700f;//variable for the force of the jump
 	public LayerMask wiGround;
 
-	bool dJump = false;
+	bool dJump = false;//boolean variable for double jump
 
     AudioSource Audio;
 
@@ -26,7 +26,7 @@ public class CharacterCode : MonoBehaviour {
 		myRigidBody = GetComponent<Rigidbody2D> ();//gets the rigidbodycomponenet
 
         float volume = PlayerPrefs.GetInt("Volume");// Gets the volume
-        Audio.volume = volume;
+        //Audio.volume = volume;
     }
 
 	void Update()
@@ -47,13 +47,13 @@ public class CharacterCode : MonoBehaviour {
 
 	void FixedUpdate () 
 	{
-		ground = Physics2D.OverlapCircle (groundCheck.position, groundRadius, wiGround);
-		a.SetBool ("Ground", ground);
-		a.SetFloat ("vertSpeed", myRigidBody.velocity.y);
+		ground = Physics2D.OverlapCircle (groundCheck.position, groundRadius, wiGround);//gets the position of the ground and stores it
+		a.SetBool ("Ground", ground);//sets the boolean fo whether the character is on the ground or not
+		a.SetFloat ("vertSpeed", myRigidBody.velocity.y);//makes the character go up the y axis by the vertspeed
 
-		if (ground) 
+		if (ground) //if on the ground
 		{
-			dJump = false;
+			dJump = false;//doublejump is false
 		}
 
 		float move = Input.GetAxis ("Horizontal");
