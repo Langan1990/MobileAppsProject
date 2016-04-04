@@ -2,8 +2,13 @@
 
 ##Technology Used
 
-For my App I used Unity 5.3.2f1
-I also used Visual Studio 2015 for the C# scripts
+Unity 5.3.2f1
+
+Visual Studio 2015 for the C# scripts
+
+##Description
+For my project I made an endless runner game on unity. i based this game on such games as jetpack joyride and doodlejump. 
+In my game you gain points as time goes by and there are also pickups that can effect your score. If you fall off the platforms your character dies and you are brought to the game over scene where the high score is displayed.
 
 ##References
 
