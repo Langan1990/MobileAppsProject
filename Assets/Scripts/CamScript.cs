@@ -7,8 +7,14 @@ public class CamScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(Chara.position.x + 6, 0, -10);//Focuses the camera to the player and moves it with the player
-    }
+        try
+        {
+            transform.position = new Vector3(Chara.position.x + 6, 0, -10);//Focuses the camera to the player and moves it with the player
+        }
+        catch (MissingReferenceException)
+        {
+        }
+     }
 
 
 
